@@ -7,6 +7,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
@@ -14,7 +15,7 @@ public class AmazonTest {
 
 	@Parameters("browser")
 	@Test
-	public void openAmazon(String browser) throws Exception {
+	public void openAmazon(@Optional("chrome")String browser) throws Exception {
 
 		WebDriver driver = null;
 
