@@ -28,15 +28,15 @@ public class AmazonTest {
 			options.addArguments("--disable-gpu");
 			options.addArguments("--remote-allow-origins=*");
 
-			driver = new RemoteWebDriver(new URL("http://localhost:4444"), options);
+			driver = new RemoteWebDriver(new URL("http://selenium-hub:4444/wd/hub"), options);
 		} else if (browser.equalsIgnoreCase("firefox")) {
 			DesiredCapabilities cap = new DesiredCapabilities();
 			cap.setBrowserName("firefox");
-			driver = new RemoteWebDriver(new URL("http://localhost:4444"), cap);
+			driver = new RemoteWebDriver(new URL("http://selenium-hub:4444/wd/hub"), cap);
 		} else if (browser.equalsIgnoreCase("edge")) {
 
 			EdgeOptions options = new EdgeOptions();
-			driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), options);
+			driver = new RemoteWebDriver(new URL("http://selenium-hub:4444/wd/hub"), options);
 		}
 
 		// driver.get("https://www.amazon.com");
