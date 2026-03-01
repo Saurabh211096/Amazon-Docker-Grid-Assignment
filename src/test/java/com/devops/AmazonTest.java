@@ -15,7 +15,7 @@ public class AmazonTest {
 
 	@Parameters("browser")
 	@Test
-	public void openAmazon(@Optional("chrome")String browser) throws Exception {
+	public void openAmazon(@Optional("edge")String browser) throws Exception {
 
 		WebDriver driver = null;
 
